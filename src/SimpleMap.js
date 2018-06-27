@@ -47,14 +47,14 @@ class SimpleMap extends Component {
                     outline: "black",
                   },
                   hover: {
-                    fill: "#5a5a5a",
-                    stroke: "#607D8B",
+                    fill: "#202020",
+                    stroke: "#404040",
                     strokeWidth: 0.75,
                     outline: "black",
                   },
                   pressed: {
-                    fill: "#5a5a5a",
-                    stroke: "#607D8B",
+                    fill: "#202020",
+                    stroke: "#404040",
                     strokeWidth: 0.75,
                     outline: "black",
                   },
