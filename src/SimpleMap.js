@@ -11,24 +11,25 @@ const wrapperStyles = {
     maxWidth: 980,
     margin: "0 auto",
 }
-
+// #E5BD0D
 class SimpleMap extends Component {
   render(){
     return (
       <div style={wrapperStyles}>
         <ComposableMap
           projectionConfig={{
-          scale: 205,
-          rotation: [-11,0,0],
+            scale: 205,
+            rotation: [-11,0,0],
           }}
           width={980}
           height={551}
           style={{
-          width: "100%",
-          height: "auto",
+            width: "100%",
+            height: "auto",
+            background: "black"
           }}
         >
-          <ZoomableGroup center={[0,20]} zoom={3}>
+          <ZoomableGroup center={[0,20]} zoom={4}>
 
             <Geographies geography="/world-50m.json">
               {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
@@ -38,22 +39,22 @@ class SimpleMap extends Component {
                   projection={projection}
                   style={{
                   default: {
-                    fill: "#ECEFF1",
-                    stroke: "#607D8B",
+                    fill: "#202020",
+                    stroke: "#404040",
                     strokeWidth: 0.75,
-                    outline: "none",
+                    outline: "black",
                   },
                   hover: {
-                    fill: "#607D8B",
+                    fill: "#5a5a5a",
                     stroke: "#607D8B",
                     strokeWidth: 0.75,
-                    outline: "none",
+                    outline: "black",
                   },
                   pressed: {
-                    fill: "#FF5722",
+                    fill: "#5a5a5a",
                     stroke: "#607D8B",
                     strokeWidth: 0.75,
-                    outline: "none",
+                    outline: "black",
                   },
                   }}
                 />
