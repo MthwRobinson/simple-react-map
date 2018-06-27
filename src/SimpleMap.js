@@ -4,6 +4,8 @@ import {
   ZoomableGroup,
   Geographies,
   Geography,
+  Markers,
+  Marker
 } from 'react-simple-maps';
 
 const wrapperStyles = {
@@ -29,7 +31,7 @@ class SimpleMap extends Component {
             background: "black"
           }}
         >
-          <ZoomableGroup center={[0,20]} zoom={4}>
+          <ZoomableGroup center={[0,20]} zoom={3}>
 
             <Geographies geography="/world-50m.json">
               {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
@@ -60,7 +62,35 @@ class SimpleMap extends Component {
                 />
                 ))}
             </Geographies>
-
+            <Markers>
+              <Marker marker={{ coordinates: [-0.5364, 51.3093]}}>
+                <circle
+                  cx={0}
+                  cy={0}
+                  r={8}
+                  fill="#E5BD0D"
+                  stroke="#E5BD0D"
+                />
+              </Marker>
+              <Marker marker={{ coordinates: [36.3424, 33.4971]}}>
+                <circle
+                  cx={0}
+                  cy={0}
+                  r={8}
+                  fill="#E5BD0D"
+                  stroke="#E5BD0D"
+                />
+              </Marker>
+              <Marker marker={{ coordinates: [52.1788, 58.3318]}}>
+                <circle
+                  cx={0}
+                  cy={0}
+                  r={8}
+                  fill="#E5BD0D"
+                  stroke="#E5BD0D"
+                />
+              </Marker>
+            </Markers>
           </ZoomableGroup>
         </ComposableMap>
 
